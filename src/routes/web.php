@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\VueloController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HomeController::class);
+
+Route::get('/usuario', [UsuarioController::class,'index']);
+Route::get('/usuario/{id}', [UsuarioController::class,'show']);
+
+Route::get('/vuelo', [VueloController::class,'index']);
+Route::get('/vuelo/{id}', [VueloController::class,'show']);

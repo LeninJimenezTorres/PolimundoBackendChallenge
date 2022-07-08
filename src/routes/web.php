@@ -25,7 +25,7 @@ Route::controller(UsuarioController::class)->group(
     }
 );
 
-Route::controller(UsuarioController::class)->group(
+Route::controller(VueloController::class)->group(
     function () {
         Route::get('/vuelo', 'index');
         Route::get('/vuelo/{id}', 'show');

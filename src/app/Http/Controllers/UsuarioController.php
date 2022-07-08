@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 
 class UsuarioController extends Controller
 {
     public function index(){
-        return ('Usuarios');
+        $usuarios=Usuario::all();
+        return view('usuarios.index');
     }
     public function show($id){
-        return ('Usuario especifico '.$id);
+        //return view('usuarios.show',['id'=>$id]);
+        return view('usuarios.show',compact('id'));
     }
 }

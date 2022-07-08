@@ -18,8 +18,16 @@ use App\Http\Controllers\VueloController;
 
 Route::get('/', HomeController::class);
 
-Route::get('/usuario', [UsuarioController::class,'index']);
-Route::get('/usuario/{id}', [UsuarioController::class,'show']);
+Route::controller(UsuarioController::class)->group(
+    function () {
+        Route::get('/usuario', 'index');
+        Route::get('/usuario/{id}', 'show');
+    }
+);
 
-Route::get('/vuelo', [VueloController::class,'index']);
-Route::get('/vuelo/{id}', [VueloController::class,'show']);
+Route::controller(UsuarioController::class)->group(
+    function () {
+        Route::get('/vuelo', 'index');
+        Route::get('/vuelo/{id}', 'show');
+    }
+);

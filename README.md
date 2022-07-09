@@ -109,8 +109,8 @@ if the flight is not found, the endpoint answer is:
 
 ## ABOUT THE DEVELOPMENT
 The api use:
-    - 2 Models: Usuario, Vuelo
-    - 3 controllers: HomeController, UsuarioController, VueloController
-    - 2 factories to autogenerate db data 
-    - 1 default template based on 'blade'
-    - 2 views based on 'blade' by each endpoint and matched to the template
+- 2 Models: Usuario, Vuelo
+- 3 controllers: HomeController, UsuarioController, VueloController
+- 2 factories to autogenerate db data 
+- 1 default template based on 'blade'
+- 2 views based on 'blade' by each endpoint and matched to the template
